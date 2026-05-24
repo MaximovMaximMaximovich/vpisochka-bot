@@ -26,7 +26,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     await update.message.reply_text(
         "✅ Бот успешно активирован в этом чате!\n\n"
-        "Теперь каждые 3 часа будет автоматически публиковаться промо-сообщение."
+        "Теперь каждые 30 мин. будет автоматически публиковаться промо-сообщение."
     )
     logger.info(f"Автопостинг настроен для чата: {chat_id}")
 
@@ -60,7 +60,7 @@ def main():
     # Автопост каждые 3 часа
     application.job_queue.run_repeating(
         post_job, 
-        interval=3600,   # 1 час
+        interval=1800,   # 30 мин
         first=30
     )
 
