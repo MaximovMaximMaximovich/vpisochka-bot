@@ -60,7 +60,7 @@ def main():
     # Автопост каждые 3 часа
     application.job_queue.run_repeating(
         post_job, 
-        interval=10800,   # 3 часа
+        interval=3600,   # 1 час
         first=30
     )
 
