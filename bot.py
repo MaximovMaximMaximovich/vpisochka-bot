@@ -7,7 +7,7 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     level=logging.INFO
 )
-logger = logging.getLogger(name)
+logger = logging.getLogger(__name__)
 
 # ================== ТОКЕН БОТА ==================
 TOKEN = "8811206687:AAE5em4FCe6sU4sAKJApneTh2iJF1_hO1SI"
